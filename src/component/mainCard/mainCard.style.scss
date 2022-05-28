@@ -1,0 +1,97 @@
+.mainCard{
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 1em;
+    color: white;
+
+    .profile-card{
+        background-color: hsl(246, 80%, 60%);
+        border-radius: 1em;
+        padding: 1.5em;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1.5em;
+
+        img{
+            border: 3px solid white;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+        }
+
+        div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 0.3em;
+            color:hsl(236, 100%, 87%);
+            font-weight: 400;
+
+            p:nth-of-type(2){
+                font-weight: 300;
+                font-size: 1.3em;
+                color: white;
+            }
+        }
+    }
+
+    .time-frame{
+        color: hsl(236, 100%, 87%);
+        padding: 1.3em 1.8em;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 400;
+
+        p{
+            cursor: pointer;
+
+            .active{
+                color: white;
+            }
+            
+            &:hover{
+                color: white;
+            }
+            &:active{
+                text-shadow: 0 0 .5em white;
+            }
+        }
+
+        .active{
+            color: white;
+        }
+    }
+}
+
+@media (min-width: 1000px) { 
+    .mainCard{
+        display: grid;
+        grid-row: 1/-1;
+        grid-template-columns: 200px;
+        grid-template-rows: 2.3fr 1fr;
+
+        .profile-card{
+            flex-direction: column;
+            align-items: flex-start;
+            font-size: .7em;
+
+            div{
+                p:nth-of-type(2){
+                    font-size: 3em;
+                }
+            }
+        }
+
+        .time-frame{
+            flex-direction: column;
+            align-items: flex-start;
+            
+            p{
+                font-size: .8em;
+                font-weight: 300;
+            }
+        }
+    }
+}
